@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SDIHS Interactive Map</title>
+    <link rel="icon" href="fin.jpeg" type="image/x-icon">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* HEADER */
+        header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        /* TOP NAV */
+        nav.topnav {
+            background-color: pink;
+            overflow: visible; /* allow dropdown */
+        }
+
+        /* CLEARFIX to fix collapsed nav */
+        nav.topnav::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        nav.topnav a {
+            float: left;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav.topnav a:hover {
+            background-color: violet;
+        }
+
+        /* DROPDOWN */
+        .dropdown {
+            float: left;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffb6c1;
+            min-width: 220px;
+            z-index: 999;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: violet;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* SIDEBAR */
+        nav.sidebar {
+            width: 220px;
+            background: yellow;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .sidebar li:hover {
+            background-color: #f4c2c2;
+        }
+
+        /* ARTICLE */
+        article {
+            padding: 30px;
+            width: 70%;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>SDIHS</h1>
+    <p>Barangay Santo Domingo, Santa Rosa City, Laguna</p>
+</header>
+
+<!-- TOP MENU -->
+<nav class="topnav">
+    <a href="groupings2.html">Home</a>
+    <a href="doc2.html">Reference</a>
+    <a href="doc 3.html">Quiz</a>
+    <a href="game.html">flipcards</a>
+
+    <div class="dropdown">
+        <a href="#">Activity ▼</a>
+        <div class="dropdown-content">
+            <a href="game.html">Flip Cards</a>
+            <a href="activity2.html">M Game</a>
+            <a href="activity3.html">Coding
+            <a href="activity3.html">Coding
+ Challenge</a>
+        </div>
+    </div> 
+
+
+    <!-- ABOUT DROPDOWN -->
+   
+
+<div class="dropdown">
+        <a href="">About ▼</a>
+        <div class="dropdown-content">
+            <a href="">Manlangit</a>
+            <a href="">Krizalyn Castro</a>
+            <a href="">Jhon Lovertyn Duran</a>
+            <a href="">Prince Menard Manlangit</a>
+<a href="">Sophia abegail C. Montilla</a
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <ul>
+            <li onclick="showContent()">Content</li>
+            <li onclick="showObjectives()">Objectives</li>
+            <li onclick="showLegal()">Legal Basis</li>
+            <li onclick="showReference()">Reference</li>
+        </ul>
+    </nav>
+
+    <!-- ARTICLE -->
+    <article id="content">
+        <h1>Content</h1>
+        <p>
+   this game helps to understand the CSS easily. 
+        </p>
+    </article>
+
+</div>
+
+<footer>
+    <p>princemenardm@gmail.com| 09919628297</p>
+    <p>10 - Makiling</p>
+    <p>© 2026 SDIHS CSS FLIP CARDS. All rights reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+    function showContent() {
+        document.getElementById("content").innerHTML = `
+            <h1>Content</h1>
+            <p>to make learn easier and happier in css
+                
+.
+            </p>
+        `;
+    }
+
+    function showObjectives() {
+        document.getElementById("content").innerHTML = `
+            <h1>Objectives</h1>
+          
+            <p>• To reduce the boredom.</p>
+            <p>• To have fun and easy ways to learn.</p>
+        `;
+    }
+
+    function showLegal() {
+        document.getElementById("content").innerHTML = `
+            <h1>Legal Basis</h1>
+            <p>
+   this project is to make learning css easier.
+            </p>
+        `;
+    }
+
+    function showReference() {
+        document.getElementById("content").innerHTML = `
+            <h1>Reference</h1>
+            <p>• DepEd ICT CSS and to learn it easily</p>
+            
+    
+        `;
+    }
+</script>
+
+</body>
+</html>
